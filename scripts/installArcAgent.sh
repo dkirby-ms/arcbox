@@ -1,7 +1,8 @@
 #!/bin/sh
 
 apt-get update
-apt install -y python-ctypes
+sudo update-alternatives --remove-all python
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 
 # Download the installation package
 wget https://aka.ms/azcmagent -O ~/install_linux_azcmagent.sh 2>/dev/null
